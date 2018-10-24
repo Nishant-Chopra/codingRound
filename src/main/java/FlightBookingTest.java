@@ -23,11 +23,9 @@ public class FlightBookingTest extends UtilityCommonFun {
     @Test
     public void testThatResultsAppearForAOneWayJourney() {
 
-        setDriverPath();
-        driver.get("https://www.cleartrip.com/");
+       
         waitFor(2000);
         driver.findElement(By.id("OneWay")).click();
-
         driver.findElement(By.id("FromTag")).clear();
         driver.findElement(By.id("FromTag")).sendKeys("Bangalore");
 
@@ -59,15 +57,6 @@ public class FlightBookingTest extends UtilityCommonFun {
         //close the browser
         driver.quit();
 
-    }
-
-
-    private void waitFor(int durationInMilliSeconds) {
-        try {
-            Thread.sleep(durationInMilliSeconds);
-        } catch (InterruptedException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
     }
 
 

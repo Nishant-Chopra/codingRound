@@ -11,9 +11,13 @@ import org.testng.annotations.Test;
 import java.io.FileNotFoundException;
 import java.util.List;
 
-public class FlightBookingTest {
+//inheritance changes
+public class FlightBookingTest extends UtilityCommonFun {
 
-    WebDriver driver = new ChromeDriver();
+     //constructor changes
+	public FlightBookingTest() throws FileNotFoundException{
+    	super();
+    }
 
 
     @Test
@@ -87,4 +91,6 @@ public class FlightBookingTest {
             System.setProperty("webdriver.chrome.driver", "chromedriver_linux");
         }
     }
+}
+
 }

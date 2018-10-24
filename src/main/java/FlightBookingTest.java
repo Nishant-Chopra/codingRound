@@ -1,4 +1,5 @@
 import com.sun.javafx.PlatformUtil;
+import Utility.UtilityCommonFun;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -22,9 +23,8 @@ public class FlightBookingTest extends UtilityCommonFun {
 
     @Test
     public void testThatResultsAppearForAOneWayJourney() {
-
        
-        waitFor(2000);
+        
         driver.findElement(By.id("OneWay")).click();
         driver.findElement(By.id("FromTag")).clear();
         driver.findElement(By.id("FromTag")).sendKeys("Bangalore");
@@ -55,7 +55,7 @@ public class FlightBookingTest extends UtilityCommonFun {
         Assert.assertTrue(isElementPresent(By.className("searchSummary")));
 
         //close the browser
-        driver.quit();
+        //driver.quit();
 
     }
 
